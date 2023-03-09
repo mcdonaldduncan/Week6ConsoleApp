@@ -1,10 +1,15 @@
-﻿namespace Week6ConsoleApp
+﻿using Week6ConsoleApp.Models;
+
+namespace Week6ConsoleApp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Circus circus = new Circus();
+            circus.PerformCircus();
+
+            Console.ReadLine();
         }
     }
 }

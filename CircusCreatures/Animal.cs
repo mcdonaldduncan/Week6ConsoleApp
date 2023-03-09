@@ -22,9 +22,9 @@ namespace Week6ConsoleApp
             Age = age;
         }
 
-        public virtual void PerformTrick()
+        public virtual string PerformTrick()
         {
-            Console.WriteLine($"{Name} does a trick!");
+            return $"{Name} does a trick!\n";
         }
 
         public virtual string GetInfo()

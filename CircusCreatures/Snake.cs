@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Week6ConsoleApp.Models;
 
 namespace Week6ConsoleApp
 {
@@ -24,10 +25,16 @@ namespace Week6ConsoleApp
             IsVenomous = true;
         }
 
-        public override void PerformTrick()
+        public override string PerformTrick()
         {
-            base.PerformTrick();
-            Console.WriteLine($"The {Name} dislocates its jaw, scaring the entire crowd!");
+            string temp = base.PerformTrick();
+            temp += $"{Name} dislocates its jaw, scaring the entire crowd!\n";
+            if (IsVenomous)
+            {
+                temp += "Watch out, its venemous!\n";
+            }
+
+            return temp;
         }
 
     }

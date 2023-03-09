@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace Week6ConsoleApp
 {
-    internal class Bigfoot : IMammal
+    internal interface IMammal
     {
         public string Name { get; set; }
         public int Age { get; set; }
 
-        public void PerformTrick()
-        {
-            Console.WriteLine($"Is that a bigfoot!?");
-            Console.WriteLine($"Run, its performing a trick!");
-        }
+        public string PerformTrick();
+
     }
 }

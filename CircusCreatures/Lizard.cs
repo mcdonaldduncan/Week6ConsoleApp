@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week6ConsoleApp
+namespace Week6ConsoleApp.Models
 {
     internal class Lizard : Animal
     {
@@ -13,10 +13,13 @@ namespace Week6ConsoleApp
 
         }
 
-        public override void PerformTrick()
+        public override string PerformTrick()
         {
-            base.PerformTrick();
-            Console.WriteLine($"The {Name} detaches its tail and flings it at the crowd!");
+            string temp = base.PerformTrick();
+
+            temp += $"{Name} detaches its tail and flings it at the crowd!\n";
+
+            return temp;
         }
 
     }
